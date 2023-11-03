@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Used Cars Price Prediction</title>
+</head>
+<body>
+    <h1>Used Cars Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="year">Year of Buying Car:</label>
+        <input type="number" id="year" name="year" required><br><br>
+        <label for="price">Current price of Car:</label>
+        <input type="number" id="price" name="price" required><br><br>
+        <label for="kms">Kilometers Driven:</label>
+        <input type="number" id="kms" name="kms" required><br><br>
+        <label for="ft">Fuel Type:</label>
+        <select id="ft" name="ft" required>
+            <option value="2">Petrol</option>
+            <option value="1">Diesel</option>
+            <option value="0">CNG</option>
+        </select><br><br>
+        <label for="st">Seller Type:</label>
+        <select id="st" name="st" required>
+            <option value="1">Individual</option>
+            <option value="0">Dealer</option>
+        </select><br><br>
+        <label for="trans">Transmission Type:</label>
+        <select id='trans' name='trans' required>
+            <option value="1">Manual</option>
+            <option value="0">Automatic</option>
+        </select><br><br>
+        <label for="owner">Number of Previous Owners:</label>
+        <select id='owner' name='owner' required>
+            <option value="0">First Owner</option>
+            <option value="1">Second Owner</option>
+            <option value="3">Third Owner</option>
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    <h1>Used Car Price Prediction Result</h1>
+    <p>Predicted Used Car Price: ₹ {{ predicted_price }} Lakhs</p>
+
+</body>
+</html>
